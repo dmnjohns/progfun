@@ -141,10 +141,10 @@ class ListsSuite extends FunSuite {
   }
 
   test("max of a list with a negative number") {
-    assert(sum(List(1,2,3,-1)) === 3)
+    assert(max(List(1,2,3,-1)) === 3)
   }
 
   test("max of a list with repeated values") {
-    assert(sum(List(2,3,2,2)) === 3)
+    assert(max(List(2,3,2,2)) === 3)
   }
 }
