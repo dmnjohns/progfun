@@ -75,7 +75,64 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.parboiled/parboiled-core/jars/parboiled-core-1.0.2.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/sbt/sbt-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/precompiled-2_9_3/precompiled-2_9_3-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/persist/persist-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/ivy/ivy-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/run/run-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/actions/actions-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/incremental-compiler/incremental-compiler-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/commons-httpclient/commons-httpclient/commons-httpclient-3.1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/compiler-ivy-integration/compiler-ivy-integration-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-tools.sbinary/sbinary_2.9.0/sbinary_2.9.0-0.4.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scalaz/scalaz-core_2.9.2/scalaz-core_2.9.2-6.0.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/net.databinder/dispatch-core_2.9.2/dispatch-core_2.9.2-0.8.8-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/commons-logging/commons-logging/commons-logging-1.1.1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/precompiled-2_10_1/precompiled-2_10_1-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-lang/scala-reflect/scala-reflect-2.10.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/jline/jline/jline-1.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/tracking/tracking-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/commons-codec/commons-codec/commons-codec-1.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/test-agent/test-agent-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/com.jcraft/jsch/jsch-0.1.46-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/interface/interface-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/net.databinder/dispatch-http_2.9.2/dispatch-http_2.9.2-0.8.8-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scalastyle/scalastyle_2.9.2/scalastyle_2.9.2-0.3.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/control/control-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/com.github.scopt/scopt_2.9.2/scopt_2.9.2-2.1.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.apache.httpcomponents/httpcore/httpcore-4.1.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/main/main-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/cache/cache-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/classpath/classpath-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/io/io-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/tasks/tasks-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.apache.commons/commons-lang3/commons-lang3-3.1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/task-system/task-system-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/logging/logging-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.apache.httpcomponents/httpclient/httpclient-4.1.3-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/process/process-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scalatest/scalatest_2.9.2/scalatest_2.9.2-1.9.1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/api/api-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/command/command-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/testing/testing-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/launcher-interface/launcher-interface-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/cc.spray/spray-json_2.9.2/spray-json_2.9.2-1.1.1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/compile/compile-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/collections/collections-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.jetbrains/sbt-structure/scala_2.9.2/sbt_0.12/sbt-structure-2.3.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/precompiled-2_8_2/precompiled-2_8_2-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.parboiled/parboiled-core/parboiled-core-1.0.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/classfile/classfile-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/compiler-integration/compiler-integration-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.parboiled/parboiled-scala/parboiled-scala-1.0.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/net.databinder/dispatch-futures_2.9.2/dispatch-futures_2.9.2-0.8.8-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-lang/scala-library/scala-library-2.10.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.apache.ivy/ivy/ivy-2.3.0-rc1-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-sbt/completion/completion-0.12.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scala-lang/scala-compiler/scala-compiler-2.10.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib_managed/srcs/org.scalariform/scalariform_2.9.2/scalariform_2.9.2-0.1.4-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>
