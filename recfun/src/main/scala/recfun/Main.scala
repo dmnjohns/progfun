@@ -26,10 +26,6 @@ object Main {
     def unmatchedParens(charList: List[Char], unmatched: Int): Int = {
       if (charList.isEmpty) {
         unmatched
-      } else if (charList.tail.isEmpty) {
-        if (charList.head == ')') unmatched + 1
-        else if (charList.head == '(') unmatched - 1
-        else unmatched
       } else {
         val numUnmatched = unmatchedParens(charList.tail, unmatched)
         
@@ -40,8 +36,7 @@ object Main {
       }
     }
 
-    if (unmatchedParens(chars, 0) == 0) true
-    else false
+    unmatchedParens(chars, 0) == 0
   }
 
   /**
