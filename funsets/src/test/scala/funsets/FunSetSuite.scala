@@ -173,4 +173,15 @@ class FunSetSuite extends FunSuite {
       assert(!exists(testSet, predicate), "Exists fail")
     }
   }
+
+  test("map creates a new set given a function") {
+    new TestSets {
+      def fun = (x: Int) => x + 1
+      val testSet = map(union(s1, union(s2, s3)), fun)
+      assert(!testSet(1), "Map 1")
+      assert(testSet(2), "Map 2")
+      assert(testSet(3), "Map 3")
+      assert(testSet(4), "Map 4")
+    }
+  }
 }
