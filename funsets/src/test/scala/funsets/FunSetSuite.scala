@@ -141,4 +141,36 @@ class FunSetSuite extends FunSuite {
       assert(!contains(testSet, 3), "Filter 3")
     }
   }
+
+  test("forall returns true if all members of a set satisfy a predicate") {
+    new TestSets {
+      val testSet = union(s1, union(s2, s3))
+      def predicate = (x: Int) => x == 1 || x == 2 || x == 3
+      assert(forall(testSet, predicate), "Forall pass")
+    }
+  }
+
+  test("forall returns false if not all members of a set satisfy a predicate") {
+    new TestSets {
+      val testSet = union(s1, union(s2, s3))
+      def predicate = (x: Int) => x == 2
+      assert(!forall(testSet, predicate), "Forall fail")
+    }
+  }
+
+  test("exists returns true if one or more members of a set satisfy a predicate") {
+    new TestSets {
+      val testSet = union(s1, union(s2, s3))
+      def predicate = (x: Int) => x == 2
+      assert(exists(testSet, predicate), "Exists pass")
+    }
+  }
+
+  test("exists returns false if no members of a set satisfy a predicate") {
+    new TestSets {
+      val testSet = union(s1, union(s2, s3))
+      def predicate = (x: Int) => x == 4
+      assert(!exists(testSet, predicate), "Exists fail")
+    }
+  }
 }
