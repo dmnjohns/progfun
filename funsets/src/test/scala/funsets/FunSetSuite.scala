@@ -86,7 +86,7 @@ class FunSetSuite extends FunSuite {
    * Once you finish your implementation of "singletonSet", exchange the
    * function "ignore" by "test".
    */
-  ignore("singletonSet(1) contains 1") {
+  test("singletonSet(1) contains 1") {
     
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
@@ -101,12 +101,44 @@ class FunSetSuite extends FunSuite {
     }
   }
 
-  ignore("union contains all elements") {
+  test("union contains all elements") {
     new TestSets {
-      val s = union(s1, s2)
-      assert(contains(s, 1), "Union 1")
-      assert(contains(s, 2), "Union 2")
-      assert(!contains(s, 3), "Union 3")
+      val testSet = union(s1, s2)
+      assert(contains(testSet, 1), "Union 1")
+      assert(contains(testSet, 2), "Union 2")
+      assert(!contains(testSet, 3), "Union 3")
+    }
+  }
+
+  test("intersect contains elements belonging to both sets") {
+    new TestSets {
+      val sOne = union(s1, s2)
+      val sTwo = union(s2, s3)
+      val testSet = intersect(sOne, sTwo)
+      assert(!contains(testSet, 1), "Intersect 1")
+      assert(contains(testSet, 2), "Intersect 2")
+      assert(!contains(testSet, 3), "Intersect 3")
+    }
+  }
+
+  test("diff contains elements belonging to the first set but not the second") {
+    new TestSets {
+      val sOne = union(s1, s2)
+      val sTwo = union(s2, s3)
+      val testSet = diff(sOne, sTwo)
+      assert(contains(testSet, 1), "Diff 1")
+      assert(!contains(testSet, 2), "Diff 2")
+      assert(!contains(testSet, 3), "Diff 3")
+    }
+  }
+
+  test("filter contains elements belonging to a set that also satisfy a predicate") {
+    new TestSets {
+      val sOne = union(s1, s2)
+      val testSet = filter(sOne, s2)
+      assert(!contains(testSet, 1), "Filter 1")
+      assert(contains(testSet, 2), "Filter 2")
+      assert(!contains(testSet, 3), "Filter 3")
     }
   }
 }
