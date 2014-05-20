@@ -55,7 +55,7 @@ abstract class TweetSet {
    * Question: Should we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-   def union(that: TweetSet): TweetSet = filterAcc(Tweet => true, that)
+   def union(that: TweetSet): TweetSet
 
   /**
    * Returns the tweet from this set which has the greatest retweet count.
@@ -66,7 +66,9 @@ abstract class TweetSet {
    * Question: Should we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-  def mostRetweeted: Tweet = ???
+  def mostRetweeted: Tweet
+
+  def mostRetweetedAcc(t: Tweet): Tweet
 
   /**
    * Returns a list containing all tweets of this set, sorted by retweet count
@@ -77,7 +79,7 @@ abstract class TweetSet {
    * Question: Should we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-  def descendingByRetweet: TweetList = ???
+  def descendingByRetweet: TweetList
 
 
   /**
@@ -125,7 +127,13 @@ class Empty extends TweetSet {
 
   def foreach(f: Tweet => Unit): Unit = ()
 
-  //def union(that: TweetSet): TweetSet = that
+  def union(that: TweetSet): TweetSet = that
+
+  def mostRetweeted: Tweet = throw new java.util.NoSuchElementException("Empty.mostRetweeted")
+
+  def mostRetweetedAcc(acc: Tweet): Tweet = acc
+
+  def descendingByRetweet: TweetList = Nil
 }
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
@@ -160,7 +168,22 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     right.foreach(f)
   }
 
-  //def union(that: TweetSet): TweetSet = that union left union right incl elem
+  def union(that: TweetSet): TweetSet = left union right union that incl elem
+
+  def mostRetweeted: Tweet =
+    mostRetweetedAcc(elem)
+//    def maxRetweets(l: Tweet, r: Tweet): Tweet = if (l.retweets > r.retweets) l else r
+//
+//    val leftHigh = left.mostRetweeted
+//    val rightHigh = right.mostRetweeted
+//
+//    maxRetweets(elem, maxRetweets(leftHigh, rightHigh))
+
+  def mostRetweetedAcc(acc: Tweet): Tweet =
+    if (elem.retweets > acc.retweets) left.mostRetweetedAcc(right.mostRetweetedAcc(elem))
+    else left.mostRetweetedAcc(right.mostRetweetedAcc(acc))
+
+  def descendingByRetweet: TweetList = new Cons(mostRetweeted, remove(mostRetweeted).descendingByRetweet)
 }
 
 trait TweetList {
