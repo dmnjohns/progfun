@@ -139,8 +139,7 @@ class Empty extends TweetSet {
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet =
-    if (p(elem)) left.filterAcc(p, right.filterAcc(p, acc.incl(elem)))
-    else left.filterAcc(p, right.filterAcc(p, acc))
+    left.filterAcc(p, right.filterAcc(p, if (p(elem)) acc.incl(elem) else acc))
 
 
   /**
@@ -168,20 +167,12 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     right.foreach(f)
   }
 
-  def union(that: TweetSet): TweetSet = left union right union that incl elem
+  def union(that: TweetSet): TweetSet = left union right union (that incl elem)
 
-  def mostRetweeted: Tweet =
-    mostRetweetedAcc(elem)
-//    def maxRetweets(l: Tweet, r: Tweet): Tweet = if (l.retweets > r.retweets) l else r
-//
-//    val leftHigh = left.mostRetweeted
-//    val rightHigh = right.mostRetweeted
-//
-//    maxRetweets(elem, maxRetweets(leftHigh, rightHigh))
+  def mostRetweeted: Tweet = mostRetweetedAcc(elem)
 
   def mostRetweetedAcc(acc: Tweet): Tweet =
-    if (elem.retweets > acc.retweets) left.mostRetweetedAcc(right.mostRetweetedAcc(elem))
-    else left.mostRetweetedAcc(right.mostRetweetedAcc(acc))
+    left.mostRetweetedAcc(right.mostRetweetedAcc(if (elem.retweets > acc.retweets) elem else acc))
 
   def descendingByRetweet: TweetList = new Cons(mostRetweeted, remove(mostRetweeted).descendingByRetweet)
 }
