@@ -44,14 +44,8 @@ object Main {
    */
   def countChange(money: Int, coins: List[Int]): Int = {
     //todo: deal with duplicates in list
-    if (money == 0) {
-      1
-    } else if (money < 0 || coins.isEmpty) {
-      0
-    } else {
-      val subAmount = money - coins.head
-
-      countChange(money, coins.tail) + countChange(subAmount, coins)
-    }
+    if (money == 0) 1
+    else if (money < 0 || coins.isEmpty) 0
+    else countChange(money, coins.tail) + countChange(money - coins.head, coins)
   }
 }
